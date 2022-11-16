@@ -14,3 +14,39 @@ $('#prikaz_btn').click(function () {
         }
     })
 });
+
+
+function dodajUKorpu(parfem_id, korisnik_id) {
+
+    $.ajax({
+        url: 'dodaj_u_korpu.php',
+        method: 'post',
+        data: {
+            par_id: parfem_id,
+            kor_id: korisnik_id
+        },
+
+        success: function () {
+            alert('Parfem dodat u korpu!')
+        }
+    })
+
+}
+
+
+function obrisiParfemKorpa(parfem_id, korisnik_id) {
+
+    $.ajax({
+        url: 'korpa_delete.php',
+        method: 'post',
+        data: {
+            par_id: parfem_id,
+            kor_id: korisnik_id
+        },
+
+        success: function () {
+            alert('Parfem obrisan iz korpe!')
+            location.reload()
+        }
+    })
+};

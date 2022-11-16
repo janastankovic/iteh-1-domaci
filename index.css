@@ -41,7 +41,8 @@
     margin-left: -2vh;
 }
 
-#korpa_btn {
+#korpa_btn,
+#korpa_del_btn {
     margin-left: 4vh;
     margin-top: 1vh;
     width: 15vh;
@@ -69,4 +70,15 @@
     justify-content: center;
     margin-top: 100px;
     margin-left: 100vh;
+}
+
+#korpa_add_btn {
+    width: 25vh;
+    margin-top: 1vh;
+    margin-left: 2vh;
+}
+
+#korpa-h1 {
+    font-size: 55px;
+    margin-top: 3vh;
 }

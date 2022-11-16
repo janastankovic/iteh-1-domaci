@@ -15,24 +15,16 @@
     <?php
     session_start();
     require 'db_conn.php';
-    require 'Parfem.php';
+    require 'Korpa.php';
 
-    $data = Parfem::sviParfemi($db_connection);
+    $data = Korpa::parfemiKorpa($_SESSION['user_id'], $db_connection);
 
     ?>
 
 
     <div class="container">
 
-        <select class="form-select" name="pol_select" id="pol_select">
-            <option value="">Izaberi pol</option>
-            <option value="Muski">Muski</option>
-            <option value="Zenski">Zenski</option>
-        </select>
-        <button class="btn btn-danger" id="prikaz_btn">Prikazi</button>
-
-        <a href="korpa_page.php"><button class="btn btn-primary" id="korpa_add_btn">Korpa</button></a>
-
+        <h1 class="text-primary text-center" id="korpa-h1">Korpa</h1>
 
         <div class="parfemi">
             <?php
@@ -45,8 +37,7 @@
                     <h5 class="text-center"><?php echo $p['pol']; ?></h5>
                     <h5 class="text-center"><?php echo $p['zapremina']; ?></h5>
                     <h5 class="text-center"><?php echo $p['cena']; ?> RSD</h5>
-
-                    <button class="btn btn-danger" onclick="dodajUKorpu(<?php echo $p['parfem_id']; ?>, <?php echo $_SESSION['user_id']; ?>)" id="korpa_btn">Dodaj u korpu</button>
+                    <button class="btn btn-danger" onclick="obrisiParfemKorpa(<?php echo $p['parfem_id']; ?>, <?php echo $_SESSION['user_id']; ?>)" id="korpa_del_btn">Obriši</button>
                 </div>
 
 
