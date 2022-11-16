@@ -36,4 +36,13 @@ class Korpa
 
         return $db_connection->query($query);
     }
+
+
+
+    public static function sort($korisnik_id, $sort, $db_connection)
+    {
+        $query = "select korpa.*, parfem.* from korpa join parfem on korpa.parfem_id = parfem.parfem_id where korpa.korisnik_id = " . $korisnik_id . " order by parfem.cena " . $sort;
+
+        return $db_connection->query($query);
+    }
 }

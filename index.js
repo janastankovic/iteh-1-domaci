@@ -50,3 +50,23 @@ function obrisiParfemKorpa(parfem_id, korisnik_id) {
         }
     })
 };
+
+
+
+function sortKorpa(korisnik_id) {
+
+    var sort = $('#sort_select').val()
+
+    $.ajax({
+        url: 'korpa_sort.php',
+        method: 'post',
+        data: {
+            kor_id: korisnik_id,
+            sort: sort
+        },
+
+        success: function (data) {
+            $('.parfemi').html(data)
+        }
+    })
+}

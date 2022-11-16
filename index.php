@@ -27,20 +27,23 @@
 
     <div class="container">
 
-        <h1 class="text-center" id="login_h1">Login page</h1>
+        <div class="login">
+            <h1 class="text-center" id="login_h1">Login page</h1>
 
-        <div class="login-form">
+            <div class="login-form">
 
-            <form method="post">
-                <label>Username: </label>
-                <input type="text" class="form-control" name="username">
+                <form method="post">
+                    <label>Username: </label>
+                    <input type="text" class="form-control" name="username">
 
-                <label>Password: </label>
-                <input type="password" class="form-control" name="password">
+                    <label>Password: </label>
+                    <input type="password" class="form-control" name="password">
 
-                <button type="submit" class="btn btn-danger" name="login_btn" id="login_btn">Login</button>
-            </form>
+                    <button type="submit" class="btn btn-danger" name="login_btn" id="login_btn">Login</button>
+                </form>
+            </div>
         </div>
+
     </div>
 
 </body>

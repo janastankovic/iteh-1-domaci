@@ -50,13 +50,13 @@
 
 #pol_select {
     margin-top: 2vh;
-    margin-left: 60vh;
+    margin-left: 58vh;
     width: 25vh;
 }
 
 #prikaz_btn {
     width: 25vh;
-    margin-left: 60vh;
+    margin-left: 58vh;
     margin-top: 1vh;
 }
 
@@ -81,4 +81,31 @@
 #korpa-h1 {
     font-size: 55px;
     margin-top: 3vh;
+}
+
+#sort_select {
+    width: 25vh;
+    height: 4vh;
+    margin-top: 2.35vh;
+    margin-left: 1vh;
+    margin-bottom: 1vh;
+}
+
+#sort_btn {
+    width: 25vh;
+    margin-left: 59vh;
+}
+
+#lbl {
+    margin-top: 2vh;
+    margin-left: 54vh;
+    font-size: 28px;
+}
+
+#div-sort {
+    display: flex;
+}
+
+.login {
+    margin-left: 4vh;
 }

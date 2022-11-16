@@ -26,6 +26,15 @@
 
         <h1 class="text-primary text-center" id="korpa-h1">Korpa</h1>
 
+        <div id="div-sort">
+            <label id="lbl">Cena: </label>
+            <select class="form-select text-center" id="sort_select">
+                <option value="asc" selected>Rastuće</option>
+                <option value="desc">Opadajuće</option>
+            </select>
+        </div>
+        <button class="btn btn-danger" onclick="sortKorpa(<?php echo $_SESSION['user_id']; ?>)" id="sort_btn">Sortiraj</button>
+
         <div class="parfemi">
             <?php
             while ($p = mysqli_fetch_array($data)) {
